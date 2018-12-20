@@ -1,0 +1,44 @@
+body {
+  font-family: "Roboto";
+  color: #606060;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  border: 0px solid #606060;
+  border-radius: 15px;
+  background-color: rgba(179, 210, 178, 0.6);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+li:hover {
+  background-color: rgba(179, 210, 178, 1);
+  cursor: pointer;
+}
+
+button {
+  border-radius: 10px;
+  color: #606060;
+}
+
+button:hover {
+  background-color: #616161;
+  color: #ffffff;
+  box-shadow: 0px 2px 15px rgba(179, 210, 178, 1);
+  cursor: pointer;
+}
+
+.cleared {
+  text-decoration: line-through;
+  background-color: #757575;
+  color: #ffffff;
+}
+
+.cleared:hover {
+  background-color: #c0c0c0;
+}

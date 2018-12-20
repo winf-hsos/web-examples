@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Examle for Data Attributes</title>
+  </head>
+  
+  <body>
+    <h1>
+      Examples for Data Attributes
+    </h1>
+    
+    <p id="one" data-myname="Lisa">I have a data attribute named <tt>myname</tt></p>
+    
+    <p id="two">My data attribute is set via JavaScript</p>
+    
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*" target="_blank">Learn more about HTML data attributes on MDN.</a>
+    </p>
+    
+    <script>
+      
+      // Get the first element and show the value of the data attribute
+      var oneEl = document.querySelector("#one");
+      var myname = oneEl.dataset.myname;
+      console.log("The value of myname is: " + myname);
+      
+      // Set the attribute to the first element to another value
+      oneEl.dataset.myname = "Laura";
+      
+      // Get the second element and add a data attribute
+      var twoEl = document.querySelector("#two");
+      twoEl.dataset.test = "Another attribute value";
+      
+    </script>
+    
+  </body>
+</html>
+
