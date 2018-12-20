@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Engineering - Read from Database</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 1. Import the Boostrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- 2. Import the example's common stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>  
+  <body>
+    
+    <!-- *** Your content starts here *** -->
+    <div class="container">
+      <div class="row mt-4">
+    
+        <div class="col-md-4">
+        
+          <!-- Einfache Karte nur mit Body -->
+          <div class="card">
+            <div class="card-body">
+              Das ist eine einfache Karte mit Textinhalt.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mt-4 mt-md-0">
+        
+          <!-- Einfache Karte mit Titel, Untertitel und Links -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Haster Helles</h5>
+              <!-- mb-2: Abstand hinzufügen, text-muted: Text grau erscheinen lassen -->
+              <h6 class="card-subtitle mb-2 text-muted">Craft Biere</h6>
+              <p class="card-text">Unser Klassiker. Das Originalrezept wurde verfeinert und bietet einen unvergleichlichen Geschmack.</p>
+              <a href="#" class="card-link">Zum Warenkorb</a>
+              <a href="#" class="card-link">Details</a>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-md-4 mt-4 mt-md-0">
+        
+          <!-- Karte mit Button -->
+          <div class="card">
+            <div class="card-header">Sonderangebot</div>
+            <div class="card-body">
+              <h5 class="card-title">Haster Bier Dunkel 0,5 L</h5>
+              <p class="card-text">Heute gibt es das Haster Bier 0,5 L für nur 1,50 €.</p>
+              <a href="#" class="btn btn-primary">Kaufen</a>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div> 
+      
+      <!-- 2. Zeile -->
+      <div class="row mt-4">
+        
+        <div class="col-md-4">
+          
+          <!-- Karte mit einer Liste -->
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Obst & Gemüse</li>
+              <li class="list-group-item">Fleisch</li>
+              <li class="list-group-item">Müsli</li>
+            </ul>
+          </div>
+        </div>
+                
+        <div class="col-md-4 mt-4 mt-md-0">
+          
+          <!-- Karte mit einer Liste und Header -->
+          <div class="card">
+            <div class="card-header">Produkte</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Äpfel</li>
+              <li class="list-group-item">Bananen</li>
+              <li class="list-group-item">Birnen</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="col-md-4 mt-4 mt-md-0">
+        
+          <!-- Karte mit Bild, Header, Liste -->
+          <div class="card">
+            <img class="card-img-top img-fluid" src="https://cdn.glitch.com/4f1e24c8-9768-4bcd-84f2-68797a1f735d%2Fbier_combo_small.jpg?1543583304702" alt="Haster Bierprobe">
+            <div class="card-body">
+              <h5 class="card-title">Teste unsere Biere</h5>
+              <p class="card-text">Du möchtest gerne alle unsere Biere probieren? Kein Problem, mit unserer <strong>Haster Kombo</strong> bekommst du all unsere Biere in kleiner Probiergröße.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Haster Helles</li>
+              <li class="list-group-item">Haster Dunkles</li>
+              <li class="list-group-item">Haster Double IPA</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Jetzt bestellen</a>
+              <a href="#" class="card-link">Details</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div> <!-- End of container --> 
+    <!-- *** Your content ends here *** -->
+    <!-- 3. Import the Bootstrap JS libraries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- 4. Import the Firebase API -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <!-- 5. Import the HSOS firebasetools -->
+    <script src="https://cdn.jsdelivr.net/gh/winf-hsos/firebase-tools@latest/src/firebase-tools.js"></script>
+    <!-- 6. Import the example's common JavaScript file -->
+    <script src="../script.js" defer></script>
+  </body>
+</html>
